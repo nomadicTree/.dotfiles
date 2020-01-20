@@ -1,6 +1,6 @@
 alias vim="nvim"
 alias nvimrc="vim ~/.config/nvim/init.vim"
-alias zshconf="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 alias ls="ls --color=auto"
