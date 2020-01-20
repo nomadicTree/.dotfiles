@@ -23,7 +23,6 @@ set title " override window title
 set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace characters
 set paste
 
-
 " More history/undo
 set history=1000
 set undolevels=1000
@@ -43,3 +42,10 @@ set nosmartindent
 
 :autocmd FileType make set noexpandtab " use tabs for makefiles
 :autocmd FileType python set ts=4 sw=4
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
