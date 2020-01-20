@@ -22,6 +22,9 @@ set showmatch " show matching parens
 set title " override window title
 set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace characters
 set paste
+set mouse=a
+set cc=120
+syntax on
 
 " More history/undo
 set history=1000
