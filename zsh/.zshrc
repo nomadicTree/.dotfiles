@@ -1,12 +1,13 @@
 # Zsh settings
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
 
 export ZSH="/home/jcussen/.oh-my-zsh"
-export PATH=$HOME/scripts:$PATH
 
 # -------------------------------- POWERLEVEL ---------------------------------
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME=powerlevel10k/powerlevel10k
 POWERLEVEL9K_MODE=nerdfont-complete
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K=truncate_beginning
 POWERLEVEL9K_TIME_BACKGROUND=black
@@ -16,7 +17,7 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=black
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=blue
 POWERLEVEL9K_CUSTOM_OS_ICON='echo   $(whoami) '
-POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND=white
+POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND=red
 POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND=black
 POWERLEVEL9K_FOLDER_ICON=
 POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
@@ -26,8 +27,11 @@ POWERLEVEL9K_VCS_UNSTAGED_ICON=±
 POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=↓
 POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=↑
 POWERLEVEL9K_VCS_COMMIT_ICON=' '
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%F{blue}╭%F{red}'
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{blue}╰%f '
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon ssh root_indicator dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time ram)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time)
+ZLE_RPROMPT_INDENT=0
 
 # ------------------------------- ZSH SETTINGS --------------------------------
 # ----- options ----
@@ -75,3 +79,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
             eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
