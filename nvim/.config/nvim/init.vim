@@ -7,6 +7,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -37,7 +38,7 @@ set smartcase
 set hlsearch
 set incsearch
 
-" Indentatin
+" Indentation
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -54,14 +55,21 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
-" Move window
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
+
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+
+" Simplify switching between splits
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+
