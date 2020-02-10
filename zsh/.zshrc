@@ -1,5 +1,13 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Zsh settings
 export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
+cd ~
 
 export ZSH="/home/jcussen/.oh-my-zsh"
 
@@ -17,7 +25,7 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=black
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=blue
 POWERLEVEL9K_CUSTOM_OS_ICON='echo   $(whoami) '
-POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND=red
+POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND=green
 POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND=black
 POWERLEVEL9K_FOLDER_ICON=
 POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
@@ -27,7 +35,7 @@ POWERLEVEL9K_VCS_UNSTAGED_ICON=±
 POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=↓
 POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=↑
 POWERLEVEL9K_VCS_COMMIT_ICON=' '
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%F{blue}╭%F{red}'
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%F{blue}╭%F{green}'
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{blue}╰%f '
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon ssh root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time)
@@ -84,3 +92,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 bindkey -v
+
+# x410
+export DISPLAY=127.0.0.1:0.0
