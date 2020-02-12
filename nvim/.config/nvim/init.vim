@@ -59,10 +59,6 @@ nmap ga <Plug>(EasyAlign)
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
-" Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
-
 " Simplify switching between splits
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -72,4 +68,4 @@ nmap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-
+:set wildmode=full
