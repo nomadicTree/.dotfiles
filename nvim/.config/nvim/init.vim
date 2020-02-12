@@ -9,23 +9,28 @@ Plug 'kshenoy/vim-signature'
 
 call plug#end()
 
-" colorscheme
+" load colorscheme from base16 shell settings
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1 " enable powerline fonts for vim-airline
 
 " QoL
-set number " show line numbers
-set showmatch " show matching parens
-set title " override window title
+set number          " show line numbers
+set showmatch       " show matching parens
+set title           " override window title
 set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace characters
-set paste
+set paste           " enable paste mode, allowing sensible pasting from outside vim
 set mouse=a
-set cc=120
-syntax on " enable syntax processing
-let mapleader="," "set leader to ,
+set cc=120          " show a bar in column 120
+syntax on           " enable syntax processing
+let mapleader=","   " set leader to ,
+set showcmd         " show command in bottom bar
+set cursorline      " highlight current line
+set wildmode=full   " visual autocomplete for command menu
+set splitbelow      " open horizontal splits below
+set splitright      " open vertical splits on the right
 
 " More history/undo
 set history=1000
@@ -42,13 +47,14 @@ set tabstop=2       " number of visual spaces per tab
 set softtabstop=2   " number of actual spaces per tab
 set shiftwidth=2    " number of spaces used by indentation commands
 set expandtab       " tabs are spaces
-set autoindent
-set nosmartindent
+filetype indent on  " load filetype-specific indent files
+set autoindent      " copy indent  from current line when starting new line
+set nosmartindent   " smart autoindent when starting a new line
 
 :autocmd FileType make set noexpandtab " use tabs for makefiles
 :autocmd FileType python set ts=4 sw=4
 
-" Switch tab
+" use tab to switch between tabs
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
@@ -58,7 +64,4 @@ nmap <C-K> <C-W><C-K>
 nmap <C-L> <C-W><C-L>
 nmap <C-H> <C-W><C-H>
 
-set splitbelow
-set splitright
 
-:set wildmode=full
