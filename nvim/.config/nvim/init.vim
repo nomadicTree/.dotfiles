@@ -24,23 +24,24 @@ set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace 
 set paste
 set mouse=a
 set cc=120
-syntax on
-let mapleader=","
+syntax on " enable syntax processing
+let mapleader="," "set leader to ,
 
 " More history/undo
 set history=1000
 set undolevels=1000
 
 " Searching
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
+set ignorecase      " ignore case when searching
+set smartcase       " ignore 'ignorecase' if search contains caps
+set hlsearch        " highlight search results
+set incsearch       " incrementally search
 
 " Indentation
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=2       " number of visual spaces per tab
+set softtabstop=2   " number of actual spaces per tab
+set shiftwidth=2    " number of spaces used by indentation commands
+set expandtab       " tabs are spaces
 set autoindent
 set nosmartindent
 
