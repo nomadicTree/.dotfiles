@@ -7,8 +7,6 @@ fi
 
 # Zsh settings
 export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
-cd ~
-
 export ZSH="/home/jcussen/.oh-my-zsh"
 
 # -------------------------------- POWERLEVEL ---------------------------------
@@ -95,3 +93,6 @@ bindkey -v
 
 # x410
 export DISPLAY=127.0.0.1:0.0
+eval $(ssh-agent)
+cd ~
+clear
