@@ -41,6 +41,8 @@ set ignorecase      " ignore case when searching
 set smartcase       " ignore 'ignorecase' if search contains caps
 set hlsearch        " highlight search results
 set incsearch       " incrementally search
+" turn off search highlight
+nmap <leader><space> :nohlsearch<CR>
 
 " Indentation
 set tabstop=2       " number of visual spaces per tab
