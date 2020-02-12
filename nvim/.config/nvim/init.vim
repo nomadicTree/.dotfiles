@@ -1,8 +1,5 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'junegunn/vim-easy-align'
-
-" Appearance
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -28,6 +25,7 @@ set paste
 set mouse=a
 set cc=120
 syntax on
+let mapleader=","
 
 " More history/undo
 set history=1000
@@ -48,13 +46,6 @@ set nosmartindent
 
 :autocmd FileType make set noexpandtab " use tabs for makefiles
 :autocmd FileType python set ts=4 sw=4
-
-" vim-easy-align
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
 
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
