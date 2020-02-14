@@ -1,4 +1,8 @@
+set nocompatible
+filetype plugin on
+
 call plug#begin(stdpath('data') . '/plugged')
+nmap <leader>p :set paste
 
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
@@ -21,7 +25,6 @@ set number          " show line numbers
 set showmatch       " show matching parens
 set title           " override window title
 set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace characters
-set paste           " enable paste mode, allowing sensible pasting from outside vim
 set mouse=a
 set cc=120          " show a bar in column 120
 syntax on           " enable syntax processing
@@ -31,6 +34,8 @@ set cursorline      " highlight current line
 set wildmode=full   " visual autocomplete for command menu
 set splitbelow      " open horizontal splits below
 set splitright      " open vertical splits on the right
+" toggle paste mode
+set pastetoggle=<leader>p
 
 " More history/undo
 set history=1000
@@ -65,5 +70,3 @@ nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-L> <C-W><C-L>
 nmap <C-H> <C-W><C-H>
-
-
