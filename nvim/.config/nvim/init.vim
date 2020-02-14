@@ -1,6 +1,7 @@
 set nocompatible
 filetype plugin on
 
+" VimPlug plugins
 call plug#begin(stdpath('data') . '/plugged')
 nmap <leader>p :set paste
 
