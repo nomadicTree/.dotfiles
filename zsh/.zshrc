@@ -89,8 +89,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-bindkey -v
-
-# x410
-export DISPLAY=127.0.0.1:0.0
-cd ~
+bindkey -v # use vim-like bindings
