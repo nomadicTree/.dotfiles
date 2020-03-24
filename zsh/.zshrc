@@ -7,7 +7,7 @@ fi
 
 # Zsh settings
 export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
-export ZSH="/home/jcussen/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # -------------------------------- POWERLEVEL ---------------------------------
 ZSH_THEME=powerlevel10k/powerlevel10k
