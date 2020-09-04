@@ -21,22 +21,27 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 let g:airline_powerline_fonts = 1 " enable powerline fonts for vim-airline
 
+
+" Line numbering
+set relativenumber
+set number
+set number relativenumber
+
 " QoL
-set number          " show line numbers
 set showmatch       " show matching parens
 set title           " override window title
 set list listchars=tab:>\ ,trail:#,extends:>,nbsp:+ " Visual tab and whitespace characters
 set mouse=a
-set cc=120          " show a bar in column 120
 syntax on           " enable syntax processing
 let mapleader=","   " set leader to ,
 set showcmd         " show command in bottom bar
 set cursorline      " highlight current line
-set wildmode=full   " visual autocomplete for command menu
 set splitbelow      " open horizontal splits below
 set splitright      " open vertical splits on the right
 " toggle paste mode
 set pastetoggle=<leader>p
+" toggle spell check
+map <F6> :setlocal spell! spelllang=en_us<CR>
 
 " More history/undo
 set history=1000
@@ -47,6 +52,8 @@ set ignorecase      " ignore case when searching
 set smartcase       " ignore 'ignorecase' if search contains caps
 set hlsearch        " highlight search results
 set incsearch       " incrementally search
+set wildmode=full   " visual autocomplete for command menu
+set path+=**        " tab completion for all file-related tasks
 " turn off search highlight
 nmap <leader><space> :nohlsearch<CR>
 
