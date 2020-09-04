@@ -90,3 +90,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 bindkey -v # use vim-like bindings
+
+# mv path/to/something <alt-/>  # Expands to: mv path/to/something path/to/something
+autoload -U copy-earlier-word
+zle -N copy-earlier-word
+bindkey "\e/" copy-earlier-word
