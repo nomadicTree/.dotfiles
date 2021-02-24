@@ -95,3 +95,5 @@ bindkey -v # use vim-like bindings
 autoload -U copy-earlier-word
 zle -N copy-earlier-word
 bindkey "\e/" copy-earlier-word
+
+eval `keychain --quiet --agents ssh --eval id_rsa github opsview --clear`
