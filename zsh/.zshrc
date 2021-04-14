@@ -64,9 +64,11 @@ SAVEHIST=5000
 
 # ----- plugins -----
 plugins=(git)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
+source $HOME/.work_aliases
 
 # User configuration
 
@@ -97,3 +99,11 @@ zle -N copy-earlier-word
 bindkey "\e/" copy-earlier-word
 
 eval `keychain --quiet --agents ssh --eval id_rsa github opsview --clear`
+
+#source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+#source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
