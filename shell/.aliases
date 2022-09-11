@@ -16,5 +16,4 @@ alias vdir="vdir --color=auto"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-
-alias mcron="/usr/local/mcrcon/mcrcon -H 192.168.0.93 -P 25575 -p $(grep minecraft-mcron ~/.secrets | awk '{print $2}') -t"
+alias tres="tmux setw automatic-rename"
