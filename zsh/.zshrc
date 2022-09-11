@@ -98,7 +98,7 @@ autoload -U copy-earlier-word
 zle -N copy-earlier-word
 bindkey "\e/" copy-earlier-word
 
-eval `keychain --quiet --agents ssh --eval id_rsa github opsview --clear`
+eval `keychain --quiet --agents ssh --eval id_rsa github --clear`
 
 #source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 #source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
